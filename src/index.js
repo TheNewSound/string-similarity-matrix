@@ -34,4 +34,4 @@ function detectWebGLContext() {
     }
 }
 
-export default compareStrings;
+export { compareStrings };

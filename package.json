@@ -4,7 +4,8 @@
   "description": "Utilizes the GPU to create a distance matrix based on the Sørensen–Dice coefficient between strings.",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --watch"
+    "dev": "webpack --watch",
+    "docs": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -29,7 +30,8 @@
   "homepage": "https://github.com/TheNewSound/string-similarity-matrix#readme",
   "devDependencies": {
     "webpack": "^4.28.4",
-    "webpack-cli": "^3.2.1"
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
     "@tensorflow/tfjs": "^0.14.2"

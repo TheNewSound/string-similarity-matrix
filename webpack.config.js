@@ -2,15 +2,24 @@ const path = require('path');
 
 module.exports = {
     entry: './src/index.js',
-    mode: 'development',
+    mode: 'production',
 
     output: {
         filename: 'main.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        library: 'stringSimilarityMatrix'
     },
     
+    devServer: {
+        contentBase: path.join(__dirname, 'docs'),
+        compress: true,
+        port: 9000,
+        open: true,
+        publicPath: '/assets/'
+    },
+
     module: {
-        loaders: [
+        /*rules: [
             {
                 test: /\.js$/,
                 loader: 'babel-loader',
@@ -18,6 +27,6 @@ module.exports = {
                     presets: ['es2015']
                 }
             }
-        ]
-    },
+        ]*/
+    }
 };
