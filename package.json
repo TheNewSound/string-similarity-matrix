@@ -29,5 +29,8 @@
   "homepage": "https://github.com/TheNewSound/string-similarity-matrix#readme",
   "devDependencies": {
     "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "^0.14.2"
   }
 }
