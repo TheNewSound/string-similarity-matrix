@@ -1,8 +1,9 @@
 const path = require('path');
 
-module.exports = {
+const webConfig = {
     entry: './src/index.js',
     mode: 'production',
+    target: 'web',
 
     output: {
         filename: 'main.js',
@@ -30,3 +31,31 @@ module.exports = {
         ]*/
     }
 };
+
+const nodeConfig = {
+    entry: './src/index.js',
+    mode: 'production',
+    target: 'node',
+
+    output: {
+        filename: 'main.node.js',
+        path: path.resolve(__dirname, 'dist'),
+        library: 'stringSimilarityMatrix',
+        libraryTarget: 'umd',
+        umdNamedDefine: true
+    },
+    
+    module: {
+        /*rules: [
+            {
+                test: /\.js$/,
+                loader: 'babel-loader',
+                query: {
+                    presets: ['es2015']
+                }
+            }
+        ]*/
+    }
+};
+
+module.exports = [ webConfig, nodeConfig ];
